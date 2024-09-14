@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { fonts } from "./fonts";
 import { Providers } from "./providers";
+import { NavbarClient } from "@/components/Navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fonts.rubik.variable}`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <NavbarClient />
+          {children}
+        </Providers>
       </body>
     </html>
   );
