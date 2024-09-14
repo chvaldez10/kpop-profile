@@ -1,3 +1,9 @@
+import { TopThree } from "@/components/core/leaderboard";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <TopThree />
+    </div>
+  );
 }
