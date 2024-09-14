@@ -2,15 +2,18 @@ import { LeaderboardEntry } from "@/types/shared";
 
 export const topThreeData: LeaderboardEntry[] = [
   {
-    username: "Aespa",
+    label: "Aespa",
     src: "/images/logos/bp_logo.jpg",
+    rank: 1,
   },
   {
-    username: "Blackpink",
+    label: "Blackpink",
     src: "/images/logos/bp_logo.jpg",
+    rank: 2,
   },
   {
-    username: "NewJeans",
+    label: "NewJeans",
     src: "/images/logos/bp_logo.jpg",
+    rank: 3,
   },
 ];

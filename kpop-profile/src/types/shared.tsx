@@ -5,7 +5,11 @@ export interface NavItem {
   href?: string;
 }
 
-export interface LeaderboardEntry {
-  username: string;
+export interface BoxProps {
+  label: string;
   src: string;
+}
+
+export interface LeaderboardEntry extends BoxProps {
+  rank: number;
 }
