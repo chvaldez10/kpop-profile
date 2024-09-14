@@ -7,7 +7,13 @@ const TopThree: FC = () => {
   const [second, first, third] = topThreeData;
 
   return (
-    <Flex justifyContent="center" alignItems="flex-end" gap={4} mb={8}>
+    <Flex
+      direction={{ base: "column", md: "row" }}
+      justifyContent="center"
+      alignItems={{ base: "flex-start", md: "flex-end" }}
+      gap={4}
+      mb={8}
+    >
       {second && <TopThreeCard {...second} rank={2} />}
       {first && <TopThreeCard {...first} rank={1} />}
       {third && <TopThreeCard {...third} rank={3} />}
