@@ -7,7 +7,5 @@ export interface NavItem {
 
 export interface LeaderboardEntry {
   username: string;
-  avatar: string;
-  points: number;
-  prize: number;
+  src: string;
 }
