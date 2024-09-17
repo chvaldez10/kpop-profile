@@ -13,6 +13,7 @@ const TopThree: FC = () => {
       alignItems={{ base: "flex-start", md: "flex-end" }}
       gap={4}
       mb={8}
+      mx="auto"
     >
       {first && (
         <TopThreeCard {...first} rank={first.rank} order={{ base: 1, md: 2 }} />

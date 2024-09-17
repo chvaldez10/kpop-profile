@@ -1,9 +1,10 @@
-import { TopThree } from "@/components/core/leaderboard";
+import { TopThree, Leaderboard } from "@/components/core/leaderboard";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <TopThree />
-    </div>
+      <Leaderboard />
+    </>
   );
 }

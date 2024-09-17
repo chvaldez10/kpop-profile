@@ -16,4 +16,14 @@ export const topThreeData: LeaderboardEntry[] = [
     src: "/images/logos/nj.svg",
     rank: 3,
   },
+  {
+    label: "NMIXX",
+    src: "/images/logos/nj.svg",
+    rank: 4,
+  },
+  {
+    label: "XG",
+    src: "/images/logos/nj.svg",
+    rank: 5,
+  },
 ];
