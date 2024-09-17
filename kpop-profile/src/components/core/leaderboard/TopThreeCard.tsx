@@ -28,10 +28,8 @@ const TopThreeCard: FC<TopThreeCardProps> = ({ label, src, rank }) => {
       <Image
         src={src}
         alt={label}
-        // boxSize="80px"
-        width="100%"
-        height={{ base: "48px", md: "96px" }}
-        // objectFit="cover"
+        w="100%"
+        h={{ base: "48px", md: "96px" }}
         borderRadius="lg"
         objectPosition="center"
       />

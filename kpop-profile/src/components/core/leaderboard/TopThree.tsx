@@ -4,7 +4,7 @@ import { topThreeData } from "@/data/mock/leaderboard";
 import TopThreeCard from "./TopThreeCard";
 
 const TopThree: FC = () => {
-  const [second, first, third] = topThreeData;
+  const [first, second, third] = topThreeData;
 
   return (
     <Flex
@@ -14,9 +14,9 @@ const TopThree: FC = () => {
       gap={4}
       mb={8}
     >
-      {second && <TopThreeCard {...second} rank={2} />}
-      {first && <TopThreeCard {...first} rank={1} />}
-      {third && <TopThreeCard {...third} rank={3} />}
+      {first && <TopThreeCard {...first} rank={first.rank} />}
+      {second && <TopThreeCard {...second} rank={second.rank} />}
+      {third && <TopThreeCard {...third} rank={third.rank} />}
     </Flex>
   );
 };
