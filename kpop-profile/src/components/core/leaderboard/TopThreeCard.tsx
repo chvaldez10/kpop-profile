@@ -25,7 +25,16 @@ const TopThreeCard: FC<TopThreeCardProps> = ({ label, src, rank }) => {
         md: rank === 1 ? "translateY(-30px)" : "none",
       }}
     >
-      <Image src={src} alt={label} boxSize="80px" borderRadius="full" />
+      <Image
+        src={src}
+        alt={label}
+        // boxSize="80px"
+        width="100%"
+        height={{ base: "48px", md: "96px" }}
+        // objectFit="cover"
+        borderRadius="lg"
+        objectPosition="center"
+      />
       <Text fontWeight="bold">{label}</Text>
       <Text>{rankString}</Text>
     </Stack>
