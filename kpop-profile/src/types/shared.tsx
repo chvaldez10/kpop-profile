@@ -12,4 +12,5 @@ export interface BoxProps {
 
 export interface LeaderboardEntry extends BoxProps {
   rank: number;
+  order?: { base: number; md: number };
 }

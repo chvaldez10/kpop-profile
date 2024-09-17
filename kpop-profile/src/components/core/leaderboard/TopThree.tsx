@@ -14,9 +14,19 @@ const TopThree: FC = () => {
       gap={4}
       mb={8}
     >
-      {first && <TopThreeCard {...first} rank={first.rank} />}
-      {second && <TopThreeCard {...second} rank={second.rank} />}
-      {third && <TopThreeCard {...third} rank={third.rank} />}
+      {first && (
+        <TopThreeCard {...first} rank={first.rank} order={{ base: 1, md: 2 }} />
+      )}
+      {second && (
+        <TopThreeCard
+          {...second}
+          rank={second.rank}
+          order={{ base: 2, md: 1 }}
+        />
+      )}
+      {third && (
+        <TopThreeCard {...third} rank={third.rank} order={{ base: 3, md: 3 }} />
+      )}
     </Flex>
   );
 };
