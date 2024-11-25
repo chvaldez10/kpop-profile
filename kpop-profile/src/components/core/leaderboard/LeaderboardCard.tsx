@@ -10,7 +10,7 @@ const LeaderboardCard: FC<LeaderboardCardProps> = ({ label, src, rank }) => {
   return (
     <HStack
       spacing={2}
-      bg="pink.50"
+      bg="purple.50"
       borderRadius="md"
       p={4}
       alignItems="center"

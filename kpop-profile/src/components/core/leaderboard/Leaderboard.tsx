@@ -12,7 +12,7 @@ const Leaderboard: FC = () => {
       justifyContent="center"
       alignItems="flex-start"
       gap={4}
-      mb={8}
+      mt={{ base: 4, md: 8 }}
       maxW="2xl"
       mx="auto"
     >

@@ -12,9 +12,10 @@ export const theme = extendTheme({
     // Soft white variations
     white: {
       50: "#f9f9f9",
-      100: "#f1f3f5",
-      200: "#e9ecef",
-      300: "#dee2e6",
+      100: "#f5f5f5",
+      150: "#f3f3f3",
+      200: "#eeeeee",
+      250: "#eaeaea",
     },
 
     // Brand colors
