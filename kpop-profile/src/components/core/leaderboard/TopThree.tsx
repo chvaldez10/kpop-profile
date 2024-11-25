@@ -12,7 +12,7 @@ const TopThree: FC = () => {
       justifyContent="center"
       alignItems={{ base: "flex-start", md: "flex-end" }}
       gap={4}
-      mb={8}
+      m={16}
       mx="auto"
     >
       {first && (
