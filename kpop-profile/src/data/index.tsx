@@ -1,1 +1,1 @@
-export { NAV_ITEMS } from "./common/navbarItems";
+export { NAV_ITEMS } from "./shared/navbarItems";
