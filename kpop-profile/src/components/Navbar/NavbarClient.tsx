@@ -121,7 +121,7 @@ const DesktopNav = () => {
               <PopoverContent
                 border={0}
                 boxShadow={"xl"}
-                bg="white"
+                bg="white.50"
                 p={4}
                 rounded={"xl"}
                 minW={"sm"}
@@ -149,13 +149,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: "pink.50" }}
+      _hover={{ bg: "brand.50" }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
+            _groupHover={{ color: "brand.300" }}
             fontWeight={500}
           >
             {label}
@@ -171,7 +171,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={"brand.300"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Box>
