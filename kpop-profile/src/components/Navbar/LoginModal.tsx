@@ -17,21 +17,24 @@ import {
   Text,
   Divider,
   Link as ChakraLink,
+  Box,
 } from "@chakra-ui/react";
+
+const ENABLE_SIGNUP = false;
 
 export const LoginButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <>
+    <Box>
       <Button
         onClick={onOpen}
         fontSize={"sm"}
         fontWeight={600}
         color={"white"}
-        bg={"pink.400"}
+        bg={"brand.300"}
         _hover={{
-          bg: "pink.300",
+          bg: "brand.400",
         }}
       >
         Login
@@ -39,8 +42,8 @@ export const LoginButton = () => {
 
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Login to K-pop Profile</ModalHeader>
+        <ModalContent bg="white.50">
+          <ModalHeader>Welcome Back</ModalHeader>
           <ModalCloseButton />
 
           <ModalBody>
@@ -55,24 +58,25 @@ export const LoginButton = () => {
                 <Input type="password" placeholder="Enter your password" />
               </FormControl>
 
-              <Button colorScheme="pink" width="full">
+              <Button colorScheme="brand" width="full">
                 Login
               </Button>
 
-              <Divider />
-
-              <Text>
-                Don&apos;t have an account?{" "}
-                <ChakraLink color="pink.500" fontWeight="bold">
-                  Sign Up
-                </ChakraLink>
-              </Text>
+              {ENABLE_SIGNUP && (
+                <>
+                  <Divider />
+                  <Text>
+                    Don&apos;t have an account?{" "}
+                    <ChakraLink color="brand.300" fontWeight="bold">
+                      Sign Up
+                    </ChakraLink>
+                  </Text>
+                </>
+              )}
             </VStack>
           </ModalBody>
         </ModalContent>
       </Modal>
-    </>
+    </Box>
   );
 };
-
-export default LoginButton;
