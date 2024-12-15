@@ -1,10 +1,9 @@
 import { FC } from "react";
-import { Stack, Image, Text, Box, VStack } from "@chakra-ui/react";
+import { Stack, Image, Text, VStack } from "@chakra-ui/react";
+import { LeaderboardRanking } from "@/components/core/ui";
 import { LeaderboardEntry } from "@/types/shared";
 
 const TopThreeCard: FC<LeaderboardEntry> = ({ label, src, rank, order }) => {
-  const rankString = rank === 1 ? "1st" : rank === 2 ? "2nd" : "3rd";
-
   return (
     <Stack
       direction={{ base: "column", md: "column" }}
@@ -25,23 +24,9 @@ const TopThreeCard: FC<LeaderboardEntry> = ({ label, src, rank, order }) => {
         transform: "scale(1.03)",
         boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)",
       }}
+      cursor="pointer"
     >
-      {/* Rank Badge */}
-      <Box
-        position="absolute"
-        top={3}
-        right={3}
-        bg="brand.400"
-        color="white"
-        px={3}
-        py={1}
-        borderRadius="full"
-        fontSize="sm"
-        fontWeight="bold"
-        boxShadow="md"
-      >
-        {rankString}
-      </Box>
+      <LeaderboardRanking rank={rank} />
 
       {/* Image and Text */}
       <VStack spacing={3} zIndex={2}>

@@ -1,13 +1,11 @@
 import { FC } from "react";
-import { VStack, Image, Text, Box } from "@chakra-ui/react";
+import { VStack, Image, Text } from "@chakra-ui/react";
 import { LeaderboardEntry } from "@/types/shared";
-import { getOrdinalSuffix } from "@/utils/numberHelpers";
+import { LeaderboardRanking } from "@/components/core/ui";
 
 interface LeaderboardCardProps extends LeaderboardEntry {}
 
 const LeaderboardCard: FC<LeaderboardCardProps> = ({ label, src, rank }) => {
-  const rankString = getOrdinalSuffix(rank);
-
   return (
     <VStack
       spacing={6}
@@ -23,22 +21,7 @@ const LeaderboardCard: FC<LeaderboardCardProps> = ({ label, src, rank }) => {
       transform="none"
       cursor="pointer"
     >
-      {/* Rank Badge */}
-      <Box
-        position="absolute"
-        top={3}
-        right={3}
-        bg="brand.400"
-        color="white"
-        px={3}
-        py={1}
-        borderRadius="full"
-        fontSize="sm"
-        fontWeight="bold"
-        boxShadow="md"
-      >
-        {rankString}
-      </Box>
+      <LeaderboardRanking rank={rank} />
 
       {/* Image and Text */}
       <VStack spacing={3} zIndex={2}>
