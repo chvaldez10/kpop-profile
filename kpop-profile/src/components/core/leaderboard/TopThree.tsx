@@ -7,11 +7,13 @@ const TopThree: FC = () => {
   const [first, second, third] = topThreeData;
 
   return (
+    // TODO: need to be the same width and height as Leaderboard
+    // TODO: the spacing needs to be consistent with Leaderboard
     <Flex
       direction={{ base: "column", md: "row" }}
       justifyContent="center"
       alignItems={{ base: "flex-start", md: "flex-end" }}
-      gap={8}
+      gap={{ base: 4, md: 8 }}
       mt={{ base: 4, md: 16 }}
       mx="auto"
     >

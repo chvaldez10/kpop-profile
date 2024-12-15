@@ -10,7 +10,6 @@ const Leaderboard: FC = () => {
     <Flex
       direction="column"
       justifyContent="center"
-      alignItems="flex-start"
       gap={4}
       mt={{ base: 4, md: 8 }}
       maxW="2xl"

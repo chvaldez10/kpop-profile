@@ -28,8 +28,8 @@ const LeaderboardCard: FC<LeaderboardCardProps> = ({ label, src, rank }) => {
         <Image
           src={src}
           alt={label}
-          w="70%"
-          h="auto"
+          w="auto"
+          h="48px"
           borderRadius="xl"
           objectFit="cover"
           boxShadow="lg"
