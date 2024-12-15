@@ -21,7 +21,6 @@ const TopThreeCard: FC<LeaderboardEntry> = ({ label, src, rank, order }) => {
       order={order}
       position="relative"
       overflow="hidden"
-      transition="all 0.3s ease"
       _hover={{
         transform: "scale(1.03)",
         boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)",
@@ -49,8 +48,8 @@ const TopThreeCard: FC<LeaderboardEntry> = ({ label, src, rank, order }) => {
         <Image
           src={src}
           alt={label}
-          w="70%"
-          h="auto"
+          w="auto"
+          h="48px"
           borderRadius="xl"
           objectFit="cover"
           boxShadow="lg"

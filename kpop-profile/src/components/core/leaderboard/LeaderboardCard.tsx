@@ -1,36 +1,66 @@
 import { FC } from "react";
-import { HStack, Image, Text } from "@chakra-ui/react";
+import { VStack, Image, Text, Box } from "@chakra-ui/react";
 import { LeaderboardEntry } from "@/types/shared";
+import { getOrdinalSuffix } from "@/utils/numberHelpers";
 
 interface LeaderboardCardProps extends LeaderboardEntry {}
 
 const LeaderboardCard: FC<LeaderboardCardProps> = ({ label, src, rank }) => {
-  const rankString = rank === 1 ? "1st" : rank === 2 ? "2nd" : "3rd";
+  const rankString = getOrdinalSuffix(rank);
 
   return (
-    <HStack
-      spacing={2}
-      bg="purple.50"
-      borderRadius="md"
-      p={4}
+    <VStack
+      spacing={6}
+      bg="white"
+      borderRadius="xl"
+      p={{ base: 6, md: 4 }}
       alignItems="center"
-      justifyContent="space-between"
-      h={{ base: "auto", md: "auto" }}
-      w={{ base: "full", md: "full" }}
-      borderColor="pink.200"
-      boxShadow="0 4px 6px rgba(0, 0, 0, 0.1)"
+      justifyContent="center"
+      h="auto"
+      w="full"
+      position="relative"
+      boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
+      transform="none"
+      cursor="pointer"
     >
-      <Image
-        src={src}
-        alt={label}
-        w={{ base: "50%", md: "100%" }}
-        h={{ base: "48px", md: "96px" }}
-        borderRadius="lg"
-        objectPosition="center"
-      />
-      <Text fontWeight="bold">{label}</Text>
-      <Text>{rankString}</Text>
-    </HStack>
+      {/* Rank Badge */}
+      <Box
+        position="absolute"
+        top={3}
+        right={3}
+        bg="brand.400"
+        color="white"
+        px={3}
+        py={1}
+        borderRadius="full"
+        fontSize="sm"
+        fontWeight="bold"
+        boxShadow="md"
+      >
+        {rankString}
+      </Box>
+
+      {/* Image and Text */}
+      <VStack spacing={3} zIndex={2}>
+        <Image
+          src={src}
+          alt={label}
+          w="70%"
+          h="auto"
+          borderRadius="xl"
+          objectFit="cover"
+          boxShadow="lg"
+        />
+        <Text
+          fontWeight="bold"
+          fontSize="lg"
+          textAlign="center"
+          color="gray.800"
+        >
+          {label}
+        </Text>
+      </VStack>
+    </VStack>
   );
 };
 

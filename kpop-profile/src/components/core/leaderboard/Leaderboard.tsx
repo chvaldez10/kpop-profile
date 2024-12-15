@@ -4,7 +4,7 @@ import { topThreeData } from "@/data/mock/leaderboard";
 import LeaderboardCard from "./LeaderboardCard";
 
 const Leaderboard: FC = () => {
-  const [first, second, third] = topThreeData;
+  const [fourth, fifth] = topThreeData.slice(-2);
 
   return (
     <Flex
@@ -16,15 +16,8 @@ const Leaderboard: FC = () => {
       maxW="2xl"
       mx="auto"
     >
-      {first && <LeaderboardCard {...first} rank={first.rank} />}
-      {second && (
-        <LeaderboardCard
-          {...second}
-          rank={second.rank}
-          order={{ base: 2, md: 1 }}
-        />
-      )}
-      {third && <LeaderboardCard {...third} rank={third.rank} />}
+      {fourth && <LeaderboardCard {...fourth} rank={fourth.rank} />}
+      {fifth && <LeaderboardCard {...fifth} rank={fifth.rank} />}
     </Flex>
   );
 };

@@ -1,6 +1,14 @@
 import { extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
+  styles: {
+    global: {
+      "*": {
+        transition: "all 0.3s ease",
+      },
+    },
+  },
+
   // Fonts
   fonts: {
     heading: "var(--font-rubik)",
