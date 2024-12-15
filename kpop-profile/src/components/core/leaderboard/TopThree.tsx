@@ -11,7 +11,7 @@ const TopThree: FC = () => {
       direction={{ base: "column", md: "row" }}
       justifyContent="center"
       alignItems={{ base: "flex-start", md: "flex-end" }}
-      gap={4}
+      gap={8}
       mt={{ base: 4, md: 16 }}
       mx="auto"
     >
