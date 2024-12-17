@@ -33,7 +33,7 @@ const TopThreeCard: FC<LeaderboardEntry> = ({ label, src, rank, order }) => {
         <Image
           src={src}
           alt={label}
-          w="auto"
+          w="full"
           h="48px"
           borderRadius="xl"
           objectFit="cover"

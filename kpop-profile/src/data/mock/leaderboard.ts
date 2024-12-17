@@ -7,23 +7,23 @@ export const mockLeaderboardData: LeaderboardEntry[] = [
     rank: 1,
   },
   {
+    label: "Nmixx",
+    src: "/images/logos/nmixx-logo.jpg",
+    rank: 2,
+  },
+  {
     label: "Aespa",
     src: "/images/logos/aespa.svg",
-    rank: 2,
+    rank: 3,
   },
   {
     label: "NewJeans",
     src: "/images/logos/nj.svg",
-    rank: 3,
-  },
-  {
-    label: "NMIXX",
-    src: "/images/logos/nj.svg",
     rank: 4,
   },
   {
-    label: "XG",
-    src: "/images/logos/nj.svg",
+    label: "Gidle",
+    src: "/images/logos/gidle-logo.jpg",
     rank: 5,
   },
 ];
