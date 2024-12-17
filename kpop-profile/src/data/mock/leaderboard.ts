@@ -1,6 +1,6 @@
 import { LeaderboardEntry } from "@/types/shared";
 
-export const topThreeData: LeaderboardEntry[] = [
+export const mockLeaderboardData: LeaderboardEntry[] = [
   {
     label: "Blackpink",
     src: "/images/logos/bp.svg",

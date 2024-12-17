@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { Flex } from "@chakra-ui/react";
-import { topThreeData } from "@/data/mock/leaderboard";
+import { mockLeaderboardData } from "@/data/mock/leaderboard";
 import TopThreeCard from "./TopThreeCard";
 
 const TopThree: FC = () => {
-  const [first, second, third] = topThreeData;
+  const topThreeGroups = mockLeaderboardData.slice(0, 3);
 
   return (
     // TODO: need to be the same width and height as Leaderboard
@@ -17,19 +17,14 @@ const TopThree: FC = () => {
       mt={{ base: 4, md: 16 }}
       mx="auto"
     >
-      {first && (
-        <TopThreeCard {...first} rank={first.rank} order={{ base: 1, md: 2 }} />
-      )}
-      {second && (
+      {topThreeGroups.map((group, index) => (
         <TopThreeCard
-          {...second}
-          rank={second.rank}
-          order={{ base: 2, md: 1 }}
+          key={index}
+          {...group}
+          rank={group.rank}
+          order={{ base: index + 1, md: index === 0 ? 2 : index === 1 ? 1 : 3 }}
         />
-      )}
-      {third && (
-        <TopThreeCard {...third} rank={third.rank} order={{ base: 3, md: 3 }} />
-      )}
+      ))}
     </Flex>
   );
 };

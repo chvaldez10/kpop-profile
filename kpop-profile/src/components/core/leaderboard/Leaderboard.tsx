@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { Flex } from "@chakra-ui/react";
-import { topThreeData } from "@/data/mock/leaderboard";
+import { mockLeaderboardData } from "@/data/mock/leaderboard";
 import LeaderboardCard from "./LeaderboardCard";
 
 const Leaderboard: FC = () => {
-  const [fourth, fifth] = topThreeData.slice(-2);
+  const [fourth, fifth] = mockLeaderboardData.slice(-2);
 
   return (
     <Flex
