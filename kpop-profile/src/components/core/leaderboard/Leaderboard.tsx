@@ -12,7 +12,7 @@ const Leaderboard: FC = () => {
       justifyContent="center"
       gap={4}
       mt={{ base: 4, md: 8 }}
-      maxW="2xl"
+      maxW="3xl"
       mx="auto"
     >
       {fourth && <LeaderboardCard {...fourth} rank={fourth.rank} />}

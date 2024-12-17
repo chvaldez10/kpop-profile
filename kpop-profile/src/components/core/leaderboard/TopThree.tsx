@@ -7,14 +7,13 @@ const TopThree: FC = () => {
   const topThreeGroups = mockLeaderboardData.slice(0, 3);
 
   return (
-    // TODO: need to be the same width and height as Leaderboard
-    // TODO: the spacing needs to be consistent with Leaderboard
     <Flex
       direction={{ base: "column", md: "row" }}
-      justifyContent="center"
+      justifyContent="space-between"
       alignItems={{ base: "flex-start", md: "flex-end" }}
       gap={{ base: 4, md: 8 }}
       mt={{ base: 4, md: 16 }}
+      maxW="3xl"
       mx="auto"
     >
       {topThreeGroups.map((group, index) => (
