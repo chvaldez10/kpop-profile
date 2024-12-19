@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { VStack, Image, Text } from "@chakra-ui/react";
 import { LeaderboardEntry } from "@/types/shared";
-import { LeaderboardRanking } from "@/components/core/ui";
+import { RankBadge } from "@/components/core/ui";
 
 interface LeaderboardCardProps extends LeaderboardEntry {}
 
@@ -21,7 +21,7 @@ const LeaderboardCard: FC<LeaderboardCardProps> = ({ label, src, rank }) => {
       transform="none"
       cursor="pointer"
     >
-      <LeaderboardRanking rank={rank} />
+      <RankBadge rank={rank} />
 
       {/* Image and Text */}
       <VStack spacing={3} zIndex={2}>

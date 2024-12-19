@@ -1,2 +1,2 @@
 // Badges
-export { default as LeaderboardRanking } from "./badges/leaderboardRanking";
+export { default as RankBadge } from "./badges/RankBadge";

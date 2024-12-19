@@ -3,13 +3,14 @@
 import { FC } from "react";
 import { VStack, useMediaQuery } from "@chakra-ui/react";
 import { LeaderboardEntry } from "@/types/shared";
-import { LeaderboardRanking } from "@/components/core/ui";
+import { RankBadge } from "@/components/core/ui";
 
 // Components
 import AwardPlaque from "./AwardPlaque";
 import VinylRecords from "./VinylRecords";
 
 const TopThreeCard: FC<LeaderboardEntry> = ({ label, rank, order }) => {
+  // Check if the screen is mobile
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
   return (
@@ -20,14 +21,14 @@ const TopThreeCard: FC<LeaderboardEntry> = ({ label, rank, order }) => {
       p={{ base: 6, md: 4 }}
       alignItems="center"
       justifyContent="center"
-      h={{ base: "300px", md: rank === 1 ? "440px" : "400px" }}
+      h={{ base: "160px", md: rank === 1 ? "440px" : "400px" }}
       w={{ base: "full", md: "300px" }}
       boxShadow="0 4px 8px rgba(0, 0, 0, 0.3)"
       order={order}
       position="relative"
     >
       {/* Rank Badge */}
-      <LeaderboardRanking rank={rank} />
+      <RankBadge rank={rank} />
 
       {/* Vinyl Records */}
       {!isMobile && <VinylRecords rank={rank} />}
