@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Flex } from "@chakra-ui/react";
 import { mockLeaderboardData } from "@/data/mock/leaderboard";
-import TopThreeCard from "./TopThreeCard";
+import PlatinumPlaque from "./PlatinumPlaque";
 
 const TopThree: FC = () => {
   const topThreeGroups = mockLeaderboardData.slice(0, 3);
@@ -17,7 +17,7 @@ const TopThree: FC = () => {
       mx="auto"
     >
       {topThreeGroups.map((group, index) => (
-        <TopThreeCard
+        <PlatinumPlaque
           key={index}
           {...group}
           rank={group.rank}

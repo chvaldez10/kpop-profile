@@ -12,7 +12,7 @@ const VinylRecords: React.FC<VinylRecordsProps> = ({ rank }) => {
       w="80%"
       aspectRatio={1}
       borderRadius="full"
-      bg="linear-gradient(145deg, #F7F7F8, #F5F5F5)"
+      bg="linear-gradient(145deg, #EDEDED, #E0E0E0)"
       position="relative"
       boxShadow="0 4px 12px rgba(169, 169, 169, 0.3)"
       _before={{
@@ -24,7 +24,7 @@ const VinylRecords: React.FC<VinylRecordsProps> = ({ rank }) => {
         width: "25%",
         height: "25%",
         borderRadius: "full",
-        bg: "white",
+        bg: "linear-gradient(145deg, #FFFFFF, #F0F0F0)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -35,13 +35,14 @@ const VinylRecords: React.FC<VinylRecordsProps> = ({ rank }) => {
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        color: "black",
+        color: "#333",
         fontSize: "2xl",
         fontWeight: "bold",
+        textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
         zIndex: 1,
       }}
     >
-      {/* Record grooves simulation */}
+      {/* Adjusted record grooves simulation for a more realistic effect */}
       <Box
         position="absolute"
         top="0"
@@ -49,7 +50,7 @@ const VinylRecords: React.FC<VinylRecordsProps> = ({ rank }) => {
         right="0"
         bottom="0"
         borderRadius="full"
-        background="repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 2px, rgba(0, 0, 0, 0.1) 3px, transparent 4px)"
+        background="repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 1px, rgba(50, 50, 50, 0.1) 2px, transparent 3px)"
       />
     </Box>
   );
