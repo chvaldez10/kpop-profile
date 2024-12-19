@@ -1,48 +1,29 @@
 import { FC } from "react";
-import { VStack, Image, Text } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import { LeaderboardEntry } from "@/types/shared";
 import { RankBadge } from "@/components/core/ui";
 
+import AwardPlaque from "./AwardPlaque";
+
 interface LeaderboardCardProps extends LeaderboardEntry {}
 
-const LeaderboardCard: FC<LeaderboardCardProps> = ({ label, src, rank }) => {
+const LeaderboardCard: FC<LeaderboardCardProps> = ({ label, rank }) => {
   return (
     <VStack
-      spacing={6}
+      spacing={8}
       bg="white"
       borderRadius="xl"
       p={{ base: 6, md: 4 }}
       alignItems="center"
       justifyContent="center"
-      h="auto"
-      w="full"
+      h="160px"
+      w={{ base: "full", md: "full" }}
+      boxShadow="0 4px 8px rgba(0, 0, 0, 0.3)"
       position="relative"
-      boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
-      transform="none"
       cursor="pointer"
     >
       <RankBadge rank={rank} />
-
-      {/* Image and Text */}
-      <VStack spacing={3} zIndex={2}>
-        <Image
-          src={src}
-          alt={label}
-          w="auto"
-          h="48px"
-          borderRadius="xl"
-          objectFit="cover"
-          boxShadow="lg"
-        />
-        <Text
-          fontWeight="bold"
-          fontSize="lg"
-          textAlign="center"
-          color="gray.800"
-        >
-          {label}
-        </Text>
-      </VStack>
+      <AwardPlaque label={label} />
     </VStack>
   );
 };

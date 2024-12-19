@@ -3,7 +3,6 @@
 import { FC } from "react";
 import { VStack, useMediaQuery } from "@chakra-ui/react";
 import { LeaderboardEntry } from "@/types/shared";
-import { RankBadge } from "@/components/core/ui";
 
 // Components
 import AwardPlaque from "./AwardPlaque";
@@ -27,9 +26,6 @@ const TopThreeCard: FC<LeaderboardEntry> = ({ label, rank, order }) => {
       order={order}
       position="relative"
     >
-      {/* Rank Badge */}
-      <RankBadge rank={rank} />
-
       {/* Vinyl Records */}
       {!isMobile && <VinylRecords rank={rank} />}
 
