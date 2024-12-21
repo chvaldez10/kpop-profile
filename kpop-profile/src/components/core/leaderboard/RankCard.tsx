@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { HStack, Image } from "@chakra-ui/react";
-import { LeaderboardEntry } from "@/types/shared";
+import { LeaderboardEntry } from "@/types/profile/leaderboardEntry";
 import { RankBadge } from "@/components/core/ui";
 
 // Components
@@ -9,7 +9,7 @@ import HorizontalSocialStack from "./atoms/HorizontalSocialStack";
 
 interface LeaderboardCardProps extends LeaderboardEntry {}
 
-const LeaderboardCard: FC<LeaderboardCardProps> = ({ label, rank }) => {
+const LeaderboardCard: FC<LeaderboardCardProps> = ({ group, rank }) => {
   return (
     <HStack
       spacing={4}
@@ -27,11 +27,11 @@ const LeaderboardCard: FC<LeaderboardCardProps> = ({ label, rank }) => {
       <RankBadge rank={rank} />
       <Image
         src={"/images/logos/nmixx-logo.jpg"}
-        alt={label}
+        alt={group.name}
         boxSize="60px"
         borderRadius="md"
       />
-      <AwardPlaque label={label} />
+      <AwardPlaque label={group.name} />
       <HorizontalSocialStack />
     </HStack>
   );

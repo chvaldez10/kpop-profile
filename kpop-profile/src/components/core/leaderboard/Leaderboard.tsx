@@ -15,8 +15,8 @@ const Leaderboard: FC = () => {
       maxW="3xl"
       mx="auto"
     >
-      {fourth && <RankCard {...fourth} rank={fourth.rank} />}
-      {fifth && <RankCard {...fifth} rank={fifth.rank} />}
+      {fourth && <RankCard {...fourth} />}
+      {fifth && <RankCard {...fifth} />}
     </Flex>
   );
 };

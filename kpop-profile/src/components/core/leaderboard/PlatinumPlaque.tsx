@@ -2,13 +2,17 @@
 
 import { FC } from "react";
 import { VStack, useMediaQuery } from "@chakra-ui/react";
-import { LeaderboardEntry } from "@/types/shared";
+import { LeaderboardEntry } from "@/types/profile/leaderboardEntry";
 
 // Components
 import AwardPlaque from "./atoms/AwardPlaque";
 import VinylRecords from "./VinylRecords";
 
-const TopThreeCard: FC<LeaderboardEntry> = ({ label, rank, order }) => {
+interface PlatinumPlaqueProps extends LeaderboardEntry {
+  order: { base: number; md: number };
+}
+
+const TopThreeCard: FC<PlatinumPlaqueProps> = ({ group, rank, order }) => {
   // Check if the screen is mobile
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
@@ -30,7 +34,7 @@ const TopThreeCard: FC<LeaderboardEntry> = ({ label, rank, order }) => {
       {!isMobile && <VinylRecords rank={rank} />}
 
       {/* Award Plaque */}
-      <AwardPlaque label={label} />
+      <AwardPlaque label={group.name} />
     </VStack>
   );
 };

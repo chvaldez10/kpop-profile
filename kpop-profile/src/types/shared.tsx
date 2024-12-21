@@ -9,8 +9,3 @@ export interface BoxProps {
   label: string;
   src: string;
 }
-
-export interface LeaderboardEntry extends BoxProps {
-  rank: number;
-  order?: { base: number; md: number };
-}

@@ -1,10 +1,11 @@
 import { FC } from "react";
 import { Flex } from "@chakra-ui/react";
 import { mockLeaderboardData } from "@/data/mock/leaderboard";
+import { LeaderboardEntry } from "@/types/profile/leaderboardEntry";
 import PlatinumPlaque from "./PlatinumPlaque";
 
 const TopThree: FC = () => {
-  const topThreeGroups = mockLeaderboardData.slice(0, 3);
+  const topThreeGroups: LeaderboardEntry[] = mockLeaderboardData.slice(0, 3);
 
   return (
     <Flex

@@ -4,6 +4,6 @@ export interface LeaderboardEntry {
   group: Group;
   userUuid: string;
   rank: number;
-  notes: string;
+  notes?: string;
   logoUrl: string;
 }
