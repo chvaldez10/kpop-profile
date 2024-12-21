@@ -1,4 +1,4 @@
--- Users table (handled by Supabase Auth)
+-- Bootleg way of keeping track of migrations 0001
 
 -- Artist/Groups table
 create table if not exists groups (
