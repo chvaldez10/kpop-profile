@@ -5,7 +5,7 @@ import { VStack, useMediaQuery } from "@chakra-ui/react";
 import { LeaderboardEntry } from "@/types/shared";
 
 // Components
-import AwardPlaque from "./AwardPlaque";
+import AwardPlaque from "./atoms/AwardPlaque";
 import VinylRecords from "./VinylRecords";
 
 const TopThreeCard: FC<LeaderboardEntry> = ({ label, rank, order }) => {

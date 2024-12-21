@@ -11,9 +11,6 @@ const LeaderboardRanking: FC<LeaderboardRankingProps> = ({ rank }) => {
 
   return (
     <Box
-      position="absolute"
-      top={4}
-      left={4}
       bg="brand.400"
       color="white"
       px={4}

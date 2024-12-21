@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Flex } from "@chakra-ui/react";
 import { mockLeaderboardData } from "@/data/mock/leaderboard";
-import LeaderboardCard from "./LeaderboardCard";
+import RankCard from "./RankCard";
 
 const Leaderboard: FC = () => {
   const [fourth, fifth] = mockLeaderboardData.slice(-2);
@@ -15,8 +15,8 @@ const Leaderboard: FC = () => {
       maxW="3xl"
       mx="auto"
     >
-      {fourth && <LeaderboardCard {...fourth} rank={fourth.rank} />}
-      {fifth && <LeaderboardCard {...fifth} rank={fifth.rank} />}
+      {fourth && <RankCard {...fourth} rank={fourth.rank} />}
+      {fifth && <RankCard {...fifth} rank={fifth.rank} />}
     </Flex>
   );
 };

@@ -13,6 +13,7 @@ const AwardPlaque: React.FC<AwardPlaqueProps> = ({ label }) => {
       width="80%"
       textAlign="center"
       boxShadow="0 2px 4px rgba(138, 43, 226, 0.3)"
+      cursor="pointer"
     >
       <Text fontWeight="bold" fontSize="lg" color="white">
         {label}
