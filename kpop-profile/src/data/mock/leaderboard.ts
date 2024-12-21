@@ -1,5 +1,6 @@
 import { LeaderboardEntry } from "@/types/shared";
 
+// Dummy data for leaderboard
 export const mockLeaderboardData: LeaderboardEntry[] = [
   {
     label: "Blackpink",
