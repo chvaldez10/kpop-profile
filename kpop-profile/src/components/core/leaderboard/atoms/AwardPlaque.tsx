@@ -1,10 +1,11 @@
+import { FC } from "react";
 import { Box, Text } from "@chakra-ui/react";
 
 interface AwardPlaqueProps {
   label: string;
 }
 
-const AwardPlaque: React.FC<AwardPlaqueProps> = ({ label }) => {
+const AwardPlaque: FC<AwardPlaqueProps> = ({ label }) => {
   return (
     <Box
       bg="linear-gradient(145deg, #8A2BE2, #DA70D6)"

@@ -11,14 +11,12 @@ const LeaderboardRanking: FC<LeaderboardRankingProps> = ({ rank }) => {
 
   return (
     <Box
-      bg="brand.400"
-      color="white"
-      px={4}
-      py={1}
-      borderRadius="full"
+      color="brand.400"
+      px={3}
+      py={2}
+      borderRadius="md"
       fontSize="sm"
       fontWeight="bold"
-      boxShadow="md"
     >
       {rankString}
     </Box>

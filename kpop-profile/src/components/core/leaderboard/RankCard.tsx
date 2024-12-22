@@ -4,8 +4,8 @@ import { LeaderboardEntry } from "@/types/profile/leaderboardEntry";
 import { RankBadge } from "@/components/core/ui";
 
 // Components
-import AwardPlaque from "./atoms/AwardPlaque";
 import HorizontalSocialStack from "./atoms/HorizontalSocialStack";
+import RankLabel from "./atoms/RankLabel";
 
 interface LeaderboardCardProps extends LeaderboardEntry {}
 
@@ -22,16 +22,22 @@ const LeaderboardCard: FC<LeaderboardCardProps> = ({ group, rank }) => {
       w="full"
       boxShadow="0 4px 8px rgba(0, 0, 0, 0.3)"
       position="relative"
-      cursor="pointer"
     >
+      {/* Rank Badge */}
       <RankBadge rank={rank} />
+
+      {/* Group Image */}
       <Image
-        src={"/images/logos/nmixx-logo.jpg"}
+        src={"/images/group-images/nmixx.jpg"}
         alt={group.name}
-        boxSize="60px"
+        boxSize="84px"
         borderRadius="md"
       />
-      <AwardPlaque label={group.name} />
+
+      {/* Group Header */}
+      <RankLabel label={group.name} />
+
+      {/* Group Socials */}
       <HorizontalSocialStack />
     </HStack>
   );

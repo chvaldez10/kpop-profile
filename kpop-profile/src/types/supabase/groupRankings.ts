@@ -1,15 +1,15 @@
 export interface GroupSocials {
   groupId: number;
-  youtubeUrl: string;
-  instagramUrl: string;
-  spotifyUrl: string;
+  youtubeUrl?: string;
+  instagramUrl?: string;
+  spotifyUrl?: string;
 }
 
 export interface Group {
   id: number;
   name: string;
   musicbrainzId: string;
-  socialId: number;
+  groupSocials?: GroupSocials;
 }
 
 export interface UserGroupRanking {
