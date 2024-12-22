@@ -24,7 +24,7 @@ const TopThreeCard: FC<PlatinumPlaqueProps> = ({ group, rank, order }) => {
       p={{ base: 6, md: 4 }}
       alignItems="center"
       justifyContent="center"
-      h={{ base: "160px", md: rank === 1 ? "440px" : "400px" }}
+      h={{ base: "160px", md: "400px" }}
       w={{ base: "full", md: "300px" }}
       boxShadow="0 4px 8px rgba(0, 0, 0, 0.3)"
       order={order}
