@@ -32,7 +32,8 @@ const LeaderboardCard: FC<LeaderboardCardProps> = ({ group, rank }) => {
         <Image
           src={"/images/group-images/nmixx.jpg"}
           alt={group.name}
-          boxSize="100px"
+          width={{ base: "100px", md: "120px" }}
+          height={{ base: "80px", md: "100px" }}
           borderRadius="md"
         />
 

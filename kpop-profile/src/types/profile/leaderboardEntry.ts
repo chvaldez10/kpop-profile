@@ -5,5 +5,5 @@ export interface LeaderboardEntry {
   userUuid: string;
   rank: number;
   notes?: string;
-  logoUrl: string;
+  logoSrc: string;
 }

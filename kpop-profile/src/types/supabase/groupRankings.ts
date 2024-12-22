@@ -18,5 +18,5 @@ export interface UserGroupRanking {
   groupId: number;
   rank: number;
   notes: string;
-  logoUrl: string;
+  logoSrc: string;
 }

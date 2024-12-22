@@ -4,7 +4,7 @@
 create table if not exists groups (
   id serial primary key,
   name text not null,
-  logo_url text,
+  logo_src text,
   musicbrainz_id text unique,
   created_at timestamptz default now() not null
 );

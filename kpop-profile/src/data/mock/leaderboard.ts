@@ -14,7 +14,7 @@ export const mockLeaderboardData: LeaderboardEntry[] = [
     userUuid: "1234567890",
     rank: 1,
     notes: "This is a note",
-    logoUrl: "/images/logos/bp.svg",
+    logoSrc: "/images/logos/bp.svg",
   },
   {
     group: {
@@ -29,7 +29,7 @@ export const mockLeaderboardData: LeaderboardEntry[] = [
     userUuid: "user-uuid-2",
     rank: 2,
     notes: "Second favorite group",
-    logoUrl: "/images/logos/nmixx-logo.jpg",
+    logoSrc: "/images/logos/nmixx-logo.jpg",
   },
   {
     group: {
@@ -44,7 +44,7 @@ export const mockLeaderboardData: LeaderboardEntry[] = [
     userUuid: "user-uuid-3",
     rank: 3,
     notes: "Third favorite group",
-    logoUrl: "/images/logos/aespa.svg",
+    logoSrc: "/images/logos/aespa.svg",
   },
   {
     group: {
@@ -59,7 +59,7 @@ export const mockLeaderboardData: LeaderboardEntry[] = [
     userUuid: "user-uuid-4",
     rank: 4,
     notes: "Fourth favorite group",
-    logoUrl: "/images/logos/nj.svg",
+    logoSrc: "/images/logos/nj.svg",
   },
   {
     group: {
@@ -74,6 +74,6 @@ export const mockLeaderboardData: LeaderboardEntry[] = [
     userUuid: "user-uuid-5",
     rank: 5,
     notes: "Fifth favorite group",
-    logoUrl: "/images/logos/gidle-logo.jpg",
+    logoSrc: "/images/logos/gidle-logo.jpg",
   },
 ];
