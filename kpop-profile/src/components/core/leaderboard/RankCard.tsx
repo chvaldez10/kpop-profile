@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { HStack, Image, Box } from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import { LeaderboardEntry } from "@/types/profile/leaderboardEntry";
 import { RankBadge } from "@/components/core/ui";
 
@@ -42,9 +42,7 @@ const LeaderboardCard: FC<LeaderboardCardProps> = ({ group, rank }) => {
       </HStack>
 
       {/* Group Socials */}
-      <Box>
-        <HorizontalSocialStack />
-      </Box>
+      <HorizontalSocialStack />
     </HStack>
   );
 };

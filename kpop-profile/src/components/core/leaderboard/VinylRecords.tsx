@@ -9,10 +9,10 @@ interface VinylRecordsProps {
 const VinylRecords: React.FC<VinylRecordsProps> = ({ rank }) => {
   return (
     <Box
-      w="80%"
+      w={{ base: "70%", md: "80%" }}
       aspectRatio={1}
       borderRadius="full"
-      bg="linear-gradient(145deg, #EDEDED, #E0E0E0)"
+      bg="linear-gradient(145deg, rgba(255, 0, 255, 0.1), rgba(0, 0, 255, 0.1))"
       position="relative"
       boxShadow="0 4px 12px rgba(169, 169, 169, 0.3)"
       _before={{
@@ -21,8 +21,8 @@ const VinylRecords: React.FC<VinylRecordsProps> = ({ rank }) => {
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        width: "25%",
-        height: "25%",
+        width: "20%",
+        height: "20%",
         borderRadius: "full",
         bg: "linear-gradient(145deg, #FFFFFF, #F0F0F0)",
         display: "flex",
@@ -36,7 +36,7 @@ const VinylRecords: React.FC<VinylRecordsProps> = ({ rank }) => {
         left: "50%",
         transform: "translate(-50%, -50%)",
         color: "#333",
-        fontSize: "2xl",
+        fontSize: { base: "lg", md: "2xl" },
         fontWeight: "bold",
         textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
         zIndex: 1,
@@ -50,7 +50,9 @@ const VinylRecords: React.FC<VinylRecordsProps> = ({ rank }) => {
         right="0"
         bottom="0"
         borderRadius="full"
-        background="repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 1px, rgba(50, 50, 50, 0.1) 2px, transparent 3px)"
+        background={`linear-gradient(145deg, rgba(255, 0, 255, 0.1), rgba(0, 0, 255, 0.1)),
+          repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 1px, rgba(255, 255, 255, 0.1) 2px, transparent 3px),
+          repeating-radial-gradient(circle at 50% 50%, transparent 0, transparent 1px, rgba(255, 255, 255, 0.1) 2px, transparent 3px)`}
       />
     </Box>
   );
