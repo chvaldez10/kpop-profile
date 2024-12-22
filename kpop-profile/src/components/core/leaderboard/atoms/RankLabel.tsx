@@ -7,7 +7,7 @@ interface RankLabelProps {
 
 const RankLabel: FC<RankLabelProps> = ({ label }) => {
   return (
-    <Box p={2} borderRadius="md" width="80%" textAlign="left" cursor="pointer">
+    <Box p={3} borderRadius="md" width="80%" textAlign="left">
       <Text fontWeight="bold" fontSize="lg" color="gray.700">
         {label}
       </Text>
