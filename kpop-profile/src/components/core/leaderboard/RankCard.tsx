@@ -9,31 +9,37 @@ import RankLabel from "./atoms/RankLabel";
 
 interface LeaderboardCardProps extends LeaderboardEntry {}
 
-const LeaderboardCard: FC<LeaderboardCardProps> = ({ group, rank }) => {
+const LeaderboardCard: FC<LeaderboardCardProps> = ({
+  group,
+  rank,
+  logoSrc,
+}) => {
   return (
     <HStack
-      spacing={4}
+      spacing={{ base: 2, md: 4 }}
       bg="white"
       borderRadius="xl"
-      p={{ base: 6, md: 4 }}
+      p={{ base: 4, md: 6 }}
       alignItems="center"
       justifyContent="space-between"
       h="160px"
-      w="full"
+      w={{ base: "95%", md: "full" }}
+      mx="auto"
       boxShadow="0 4px 8px rgba(0, 0, 0, 0.3)"
       position="relative"
     >
       {/* Grouped Items */}
-      <HStack spacing={4} alignItems="center">
+      <HStack spacing={{ base: 2, md: 4 }} alignItems="center">
         {/* Rank Badge */}
         <RankBadge rank={rank} />
 
         {/* Group Image */}
         <Image
-          src={"/images/group-images/nmixx.jpg"}
+          src={logoSrc}
           alt={group.name}
           width={{ base: "100px", md: "120px" }}
           height={{ base: "80px", md: "100px" }}
+          objectFit="cover"
           borderRadius="md"
         />
 

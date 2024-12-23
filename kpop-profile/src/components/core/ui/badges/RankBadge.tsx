@@ -12,8 +12,8 @@ const LeaderboardRanking: FC<LeaderboardRankingProps> = ({ rank }) => {
   return (
     <Box
       color="brand.400"
-      px={3}
-      py={2}
+      px={{ base: 2, md: 4 }}
+      py={{ base: 1, md: 2 }}
       borderRadius="md"
       fontSize="sm"
       fontWeight="bold"
