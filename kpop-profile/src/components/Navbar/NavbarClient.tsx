@@ -39,7 +39,12 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box bg="white.50" borderBottom="1px solid" borderColor="brand.200">
+    <Box
+      bg="white.50"
+      borderBottom="1px solid"
+      borderColor="brand.200"
+      transition="all 0.2s ease-in-out"
+    >
       <Flex
         color="gray.600"
         minH={"60px"}

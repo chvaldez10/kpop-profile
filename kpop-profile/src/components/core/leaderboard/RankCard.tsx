@@ -27,6 +27,7 @@ const LeaderboardCard: FC<LeaderboardCardProps> = ({
       mx="auto"
       boxShadow="0 4px 8px rgba(0, 0, 0, 0.3)"
       position="relative"
+      transition="all 0.3s ease-in-out"
     >
       {/* Grouped Items */}
       <HStack spacing={{ base: 2, md: 4 }} alignItems="center">

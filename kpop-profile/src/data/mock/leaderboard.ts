@@ -49,7 +49,7 @@ export const mockLeaderboardData: LeaderboardEntry[] = [
   {
     group: {
       id: 4,
-      name: "NewJeans With Really Long Name",
+      name: "NewJeans",
       musicbrainzId: "some-musicbrainz-id-4",
       groupSocials: {
         groupId: 4,

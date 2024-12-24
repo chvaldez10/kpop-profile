@@ -42,7 +42,11 @@ export const LoginButton = () => {
 
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
-        <ModalContent bg="white.50">
+        <ModalContent
+          bg="white.50"
+          py={4}
+          minHeight={{ base: "100vh", md: "auto" }}
+        >
           <ModalHeader>Welcome Back</ModalHeader>
           <ModalCloseButton />
 

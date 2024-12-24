@@ -15,7 +15,7 @@ const SocialIconButton: FC<{ url: string }> = ({ url }) => (
 
 const SocialHorizontalStack: FC = () => {
   return (
-    <HStack spacing={2}>
+    <HStack spacing={2} transition="all 0.3s ease-in-out">
       <SocialIconButton url="https://www.youtube.com/@NMIXXOfficial" />
       <SocialIconButton url="https://instagram.com" />
       <SocialIconButton url="https://spotify.com" />

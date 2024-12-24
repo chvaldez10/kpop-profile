@@ -1,13 +1,13 @@
 import { extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
-  styles: {
-    global: {
-      "*": {
-        transition: "all 0.3s ease-in-out",
-      },
-    },
-  },
+  // styles: {
+  //   global: {
+  //     "*": {
+  //       transition: "all 0.3s ease-in-out",
+  //     },
+  //   },
+  // },
 
   // Fonts
   fonts: {
