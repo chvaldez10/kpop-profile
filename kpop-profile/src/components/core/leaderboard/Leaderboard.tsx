@@ -4,7 +4,7 @@ import { mockLeaderboardData } from "@/data/mock/leaderboard";
 import RankCard from "./RankCard";
 
 const Leaderboard: FC = () => {
-  const [fourth, fifth] = mockLeaderboardData.slice(-2);
+  const topFiveGroups = mockLeaderboardData.slice(0, 5);
 
   return (
     <Flex
@@ -15,8 +15,9 @@ const Leaderboard: FC = () => {
       maxW="3xl"
       mx="auto"
     >
-      {fourth && <RankCard {...fourth} />}
-      {fifth && <RankCard {...fifth} />}
+      {topFiveGroups.map((group) => (
+        <RankCard key={group.rank} {...group} />
+      ))}
     </Flex>
   );
 };
